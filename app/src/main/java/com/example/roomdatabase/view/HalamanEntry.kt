@@ -1,4 +1,4 @@
-package com.example.roomdatabase.view.uicontroller
+package com.example.roomdatabase.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -8,17 +8,14 @@ import androidx.compose.material3.*
 import androidx.compose.material3.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.roomdatabase.R
-import com.example.roomdatabase.room.Siswa
 import com.example.roomdatabase.viewmodel.DetailSiswa
 import com.example.roomdatabase.viewmodel.EntryViewModel
 import com.example.roomdatabase.viewmodel.UIStateSiswa

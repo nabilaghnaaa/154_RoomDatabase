@@ -1,4 +1,4 @@
-package com.example.roomdatabase.view.uicontroller
+package com.example.roomdatabase.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
