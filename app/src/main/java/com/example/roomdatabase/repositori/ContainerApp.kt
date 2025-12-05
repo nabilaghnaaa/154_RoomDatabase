@@ -2,20 +2,28 @@ package com.example.roomdatabase.repositori
 
 import android.app.Application
 import android.content.Context
-import com.example.roomdatabase.room.DatabaseSiswa
+import com.example.a20230140094_roomdatabase.room.DatabaseSiswa
 
-
-interface ContainerApp {
+interface ContainerApp{
     val repositoriSiswa : RepositoriSiswa
 }
 
-// 2. Concrete Implementation of the Container
-class ContainerDataApp(private val context: Context):
-    ContainerApp {
-
+class ContainerDataApp(private val context: Context): ContainerApp{
     override val repositoriSiswa: RepositoriSiswa by lazy {
-        OfflineRepositoriSiswa(
-            siswaDao = DatabaseSiswa.getDatabase(context).siswaDao()
-        )
+        OfflineRepositoriSiswa(DatabaseSiswa.getDatabase(context).siswaDao())
+    }
+}
+
+class AplikasiSiswa : Application(){
+    /**
+     * AppContainer instance digunakan oleh kelas lainnya untuk mendapatkan dependensi
+     */
+
+    lateinit var container: ContainerApp
+
+    override fun onCreate(){
+        super.onCreate()
+        container = ContainerDataApp(this)
+
     }
 }
