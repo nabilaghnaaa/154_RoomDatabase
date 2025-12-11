@@ -1,0 +1,5 @@
+![Tampilan Detail Ssiwa](DetailSiswa.png)
+![Tampilan Edit Siswa](EditSiswa.png)
+![Tampilan Tambah Siswa](TambahSiswa.png)
+![Tampilan Awal](TampilanAwal.png)
+![Tampilan Validasi Hapus](ValidasiHapus.png)
